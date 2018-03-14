@@ -1,12 +1,14 @@
-export function Solution(haiku) {
+function Solution(haiku) {
   this.haiku = haiku;
 }
 
-// export function countWords() {
-//   var arr = this.haiku.split(" ").length;
-//   console.log(arr);
-//   return arr;
-// }
+exports.solutionModule = Solution;
+
+Solution.prototype.countWords = function() {
+  var arr = this.haiku.split(" ").length;
+  console.log(arr);
+  return arr;
+}
 
 // export function singleSplit() {
 //
