@@ -19,11 +19,18 @@ Solution.prototype.countNextConsonants = function() {
   return consts.length;
 };
 
-
 Solution.prototype.countVowels = function() {
   let arr = this.haiku.split(" ").length;
-  let consts = this.haiku.match(/[aeiou]/g);
   console.log("Words: " + arr);
-  console.log("vowels list:" + consts);
+  let consts = this.haiku.match(/[aeiou]/g);
+  console.log("vowels list: " + consts);
+  console.log("vowels :" + consts.length);
   return consts.length;
+};
+
+Solution.prototype.countPair = function() {
+  let arr = this.haiku.split(" ").length;
+  console.log("Words: " + arr);
+  
+  return arr;
 };
