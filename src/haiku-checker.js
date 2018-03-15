@@ -38,10 +38,10 @@ Solution.prototype.countPair = function() {
 };
 
 Solution.prototype.countDoubleVowel = function() {
-  // let arr = this.haiku.split(" ").length;
-  // console.log("Words: " + arr);
-  // let consts = this.haiku.toLowerCase().match(/[aeiou][qwrtypsdfghjklzxcvbnm]/g);
-  // console.log("vc pair:" + consts);
-  // console.log("vc pair:" + consts.length);
-  // return consts.length;
+  let arr = this.haiku.split(" ").length;
+  console.log("Words: " + arr);
+  let consts = this.haiku.toLowerCase().match(/[aeiou]{2,}/g);
+  console.log("double vowels: " + consts);
+  console.log("# of double vowels: " + consts.length);
+  return consts.length;
 };
