@@ -27,4 +27,9 @@ describe('Solution', function() {
     expect(pairSolution.countPair()).toEqual(14);
   });
 
+  it('should count double vowels as one syllable', function () {
+    let doubleVowel = new Solution("An old silent pool, A frog jumps into the pool, splash! Silence again.");
+    expect(doubleVowel.countDoubleVowel()).toEqual(2);
+  });
+
 });
