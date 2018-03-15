@@ -31,6 +31,8 @@ Solution.prototype.countVowels = function() {
 Solution.prototype.countPair = function() {
   let arr = this.haiku.split(" ").length;
   console.log("Words: " + arr);
-  
-  return arr;
+  let consts = this.haiku.toLowerCase().match(/[aeiou][qwrtypsdfghjklzxcvbnm]/g);
+  console.log("vc pair:" + consts);
+  console.log("vc pair:" + consts.length);
+  return consts.length;
 };

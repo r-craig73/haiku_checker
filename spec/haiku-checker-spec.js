@@ -13,8 +13,8 @@ describe('Solution', function() {
   });
 
   it('should be able to detect 2 or more consonants next to each other', function () {
-    let consonantsSolution = new Solution("other object");
-    expect(consonantsSolution.countNextConsonants()).toEqual(3);
+    let consonantsSolution = new Solution("An old silent pond, A frog jumps into the pond, splash! Silence again.");
+    expect(consonantsSolution.countNextConsonants()).toEqual(11);
   });
 
   it('should be able to count vowels for each word', function () {
@@ -24,7 +24,7 @@ describe('Solution', function() {
 
   it('should be able to count vowels and consonants pairs', function () {
     let pairSolution = new Solution("An old silent pond, A frog jumps into the pond, splash! Silence again.");
-    expect(pairSolution.countPair()).toEqual(16);
+    expect(pairSolution.countPair()).toEqual(14);
   });
 
 });
