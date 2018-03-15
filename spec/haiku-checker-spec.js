@@ -17,4 +17,9 @@ describe('Solution', function() {
     expect(consonantsSolution.countNextConsonants()).toEqual(3);
   });
 
+  it('should be able to count vowels for each word', function () {
+    let consonantsSolution = new Solution("other object");
+    expect(consonantsSolution.countVowels()).toEqual(4);
+  });
+
 });

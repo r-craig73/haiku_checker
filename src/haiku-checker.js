@@ -15,8 +15,12 @@ Solution.prototype.countNextConsonants = function() {
   console.log("Words: " + arr);
   let consts = this.haiku.match(/[qwrtypsdfghjklzxcvbnm]{2,}/g);
   console.log("2 consonants list: " + consts);
-  console.log("2 consonants: " + consts.length);
-
-
+  console.log("2 consonants #: " + consts.length);
   return consts.length;
+};
+
+
+Solution.prototype.countVowels = function() {
+
+
 };
