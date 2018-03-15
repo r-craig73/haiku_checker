@@ -1,6 +1,7 @@
-function Solution(haiku) {
+export function Solution(haiku) {
   this.haiku = haiku;
 }
+// add a branch to consider 0 values
 
 exports.solutionModule = Solution;
 
