@@ -38,4 +38,15 @@ Solution.prototype.countEndWithE = function() {
     }
   }
   return counter;
+};
+
+  Solution.prototype.countEndWithIa = function() {
+    let counter = 0;
+    let consts = /.*(ia)$/i;
+    for (let i = 0; i < this.haiku.split(" ").length; i++) {
+      if(this.haiku.split(" ")[i].match(consts)){
+        counter++;
+      }
+    }
+    return counter;
   };

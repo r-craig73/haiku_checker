@@ -32,8 +32,8 @@ describe('Solution', function() {
     expect(doubleVowel.countDoubleVowel()).toEqual(3);
   });
 
-  it('should count number of times word ends in the letter e', function () {
-    let endsWithE = new Solution("An old silent pool, A frog jumpse into the pool, splash! Silence again.");
-    expect(endsWithE.countEndWithE()).toEqual(3);
+  it('should count number of times word ends with ia', function () {
+    let endsWithIa= new Solution("An old silent pool, A frog jumpse into the pool, splash! Inertia silence.");
+    expect(endsWithIa.countEndWithIa()).toEqual(1);
   });
 });
