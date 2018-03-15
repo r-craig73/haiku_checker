@@ -21,6 +21,9 @@ Solution.prototype.countNextConsonants = function() {
 
 
 Solution.prototype.countVowels = function() {
-
-
+  let arr = this.haiku.split(" ").length;
+  let consts = this.haiku.match(/[aeiou]/g);
+  console.log("Words: " + arr);
+  console.log("vowels list:" + consts);
+  return consts.length;
 };
