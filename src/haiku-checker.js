@@ -45,3 +45,7 @@ Solution.prototype.countDoubleVowel = function() {
   console.log("# of double vowels: " + consts.length);
   return consts.length;
 };
+
+Solution.prototype.countEndWithE = function() {
+
+};
