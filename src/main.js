@@ -1,4 +1,4 @@
-import { Solution } from './../src/haiku-checker.js';
+import { Solution } from './haiku-checker';
 import './../src/styles.css';
 import $ from 'jquery';
 import 'bootstrap';
