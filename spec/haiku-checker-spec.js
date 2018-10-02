@@ -1,11 +1,6 @@
 let Solution = require('./../src/haiku-checker.js').solutionModule;
 
 describe('Solution', function() {
-  it('should make sure a haiku has 17 syllables', function(){
-    let solution = new Solution(17);
-    expect(solution.haiku).toEqual(17);
-  });
-
   it('should count number of words in the haiku', function() {
     let goodHaiku = "An old silent pond, A frog jumps into the pond, splash! Silence again.";
     let wordSolution = new Solution(goodHaiku);
@@ -32,13 +27,28 @@ describe('Solution', function() {
     expect(doubleVowel.countDoubleVowel()).toEqual(3);
   });
 
-  it('should count number of times word ends with e', function () {
+  it('should count number of times a word ends with e', function () {
     let endsWithIa= new Solution("An old silent pool, A frog jumps into the pool, splash! Inertia silence.");
     expect(endsWithIa.countEndWithE()).toEqual(2);
   });
 
-  it('should count number of times word ends with ia', function () {
+  it('should count number of times a word ends with ia', function () {
     let endsWithIa= new Solution("An old silent pool, A frog jumps into the pool, splash! Inertia silence.");
     expect(endsWithIa.countEndWithIa()).toEqual(1);
+  });
+
+  it('should count number of times a word contains a prefix or suffix', function () {
+    let endsWithIa= new Solution("An old silent pool, A frog jumps into the pool, splash! Inertia silence.");
+    expect(endsWithIa.countPrePostFix()).toEqual(3);
+  });
+
+  it('should count number of times a word contains double consonants that makes a sound', function () {
+    let endsWithIa= new Solution("An old silent pool, A frog jumps into the pool, splash! Inertia silence.");
+    expect(endsWithIa.countConSound()).toEqual(2);
+  });
+
+  it('should make sure a haiku has 17 syllables', function(){
+    let solution = new Solution(17);
+    expect(solution.haiku).toEqual(17);
   });
 });
