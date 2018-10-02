@@ -1,5 +1,5 @@
 export function Solution(haiku) {
-  this.haiku = haiku;
+  this.haiku = haiku.replace(/[^a-zA-Z ]/g, "").toLowerCase();
 }
 // add a branch to consider 0 values
 
@@ -12,42 +12,60 @@ Solution.prototype.countWords = function() {
 
 Solution.prototype.countNextConsonants = function() {
   let consts = this.haiku.match(/[qwrtypsdfghjklzxcvbnm]{2,}/g);
-  return consts.length;
+  if(consts) {
+    return consts.length
+  } else {
+    return 0
+  }
 };
 
 Solution.prototype.countVowels = function() {
   let consts = this.haiku.match(/[aeiou]/g);
-  return consts.length;
+  if(consts) {
+    return consts.length
+  } else {
+    return 0
+  }
 };
 
 Solution.prototype.countPair = function() {
-  let consts = this.haiku.toLowerCase().match(/[aeiou][qwrtypsdfghjklzxcvbnm]/g);
-  return consts.length;
+  let consts = this.haiku.match(/[aeiou][qwrtypsdfghjklzxcvbnm]/g);
+  if(consts) {
+    return consts.length
+  } else {
+    return 0
+  }
 };
 
 Solution.prototype.countDoubleVowel = function() {
-  let consts = this.haiku.toLowerCase().match(/[aeiou]{2,}/g);
-  return consts.length;
+  let consts = this.haiku.match(/[aeiou]{2,}/g);
+  if(consts) {
+    return consts.length
+  } else {
+    return 0
+  }
 };
 
 Solution.prototype.countEndWithE = function() {
   let counter = 0;
-  let consts = /.*e$/i;
-  for (let i = 0; i < this.haiku.split(" ").length; i++) {
-    if(this.haiku.split(" ")[i].match(consts)){
-      counter++;
+  let words = this.haiku
+  for (let i = 0; i < words.split(" ").length; i++) {
+    let anyWord = words.split(" ")[i].slice(-1)
+    if(anyWord.match(/e$/m)) {
+      counter += 1;
     }
   }
-  return counter;
+  return counter
 };
 
-  Solution.prototype.countEndWithIa = function() {
-    let counter = 0;
-    let consts = /.*(ia)$/i;
-    for (let i = 0; i < this.haiku.split(" ").length; i++) {
-      if(this.haiku.split(" ")[i].match(consts)){
-        counter++;
-      }
-    }
-    return counter;
-  };
+Solution.prototype.countEndWithIa = function() {
+  let len = 0;
+  let phrase = this.haiku
+  for (let i = 0; i < phrase.split(" ").length; i++) {
+    let iaWord = phrase.split(" ")[i].slice(-2)
+    if(iaWord === "ia") {
+      len += 1;
+    } 
+  }
+  return len;
+};
