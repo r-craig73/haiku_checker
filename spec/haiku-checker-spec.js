@@ -19,7 +19,7 @@ describe('Solution', function() {
 
   it('should be able to count vowels for each word', function () {
     let consonantsSolution = new Solution("An old silent pond, A frog jumps into the pond, splash! Silence again.");
-    expect(consonantsSolution.countVowels()).toEqual(17);
+    expect(consonantsSolution.countVowels()).toEqual(19);
   });
 
   it('should be able to count vowels and consonants pairs', function () {
@@ -32,8 +32,13 @@ describe('Solution', function() {
     expect(doubleVowel.countDoubleVowel()).toEqual(3);
   });
 
+  it('should count number of times word ends with e', function () {
+    let endsWithIa= new Solution("An old silent pool, A frog jumps into the pool, splash! Inertia silence.");
+    expect(endsWithIa.countEndWithE()).toEqual(2);
+  });
+
   it('should count number of times word ends with ia', function () {
-    let endsWithIa= new Solution("An old silent pool, A frog jumpse into the pool, splash! Inertia silence.");
+    let endsWithIa= new Solution("An old silent pool, A frog jumps into the pool, splash! Inertia silence.");
     expect(endsWithIa.countEndWithIa()).toEqual(1);
   });
 });
