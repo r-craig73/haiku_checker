@@ -18,7 +18,7 @@
 4. Be able to count vowels for each word.
 5. Be able to count vowels and consonants pairs.
 6. Be able to count double vowels as one syllable.
-7. Be able to count the number of times a word ends with 'e' (missing spec).
+7. Be able to count the number of times a word ends with 'e'.
 8. Be able to count the number of times a word ends with 'ia'.
 
 ### Possible sources for haiku and syllable detection
