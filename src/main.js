@@ -16,5 +16,7 @@ $(document).ready(function() {
     $('#haikus').append('<li>Count words ending with e : ' + solution.countEndWithE() + '</li>');
     $('#haikus').append('<li>Count words ending with ia : ' + solution.countEndWithIa() + '</li>');
     $('#haikus').append('<li>Count 2 or more consonants next to each other: ' + solution.countNextConsonants() + '</li>');
+    $('#haikus').append('<li>Count prefixes and suffixes: ' + solution.countPrePostFix() + '</li>');
+    $('#haikus').append('<li>Count consonants resulting in sound: ' + solution.countConSound() + '</li>');
   });
 });
