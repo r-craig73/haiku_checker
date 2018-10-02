@@ -1,4 +1,4 @@
-#haiku_checker
+# haiku_checker
 
 ## An app to check if poems are haikus
 
@@ -12,16 +12,18 @@
 #### Epicodus lesson - Practicing Test Driven Development using Jasmine to write the test specs and Karma to run the specs.  The specs checks whether a poem is a haiku.
 
 ## List of specs passing
-1. Make sure a haiku has 17 syllables (failed spec).
-2. Count number of words in the haiku.
-3. Syllable detection by 2 or more consonants next to each other.
-4. Be able to count vowels for each word.
-5. Be able to count vowels and consonants pairs.
-6. Be able to count double vowels as one syllable.
-7. Be able to count the number of times a word ends with 'e'.
-8. Be able to count the number of times a word ends with 'ia'.
+1. Count number of words in the haiku.
+2. Syllable detection by 2 or more consonants next to each other.
+3. Be able to count vowels for each word.
+4. Be able to count vowels and consonants pairs.
+5. Be able to count double vowels as one syllable.
+6. Be able to count the number of times a word ends with 'e'.
+7. Be able to count the number of times a word ends with 'ia'.
+8. Be able to count the number of times a word contains a prefix or suffix.
+9. Be able to count the number of times a word contains double consonants that makes a sound.
+10. Make sure a haiku has 17 syllables (failed spec).
 
-### Possible sources for haiku and syllable detection
+### Sources for haiku and syllable detection
 #### http://jzimba.blogspot.com/2017/07/an-algorithm-for-counting-syllables.html (interesting rules)
 #### The consonant surrounded by vowels https://www.howmanysyllables.com/divideintosyllables
 
