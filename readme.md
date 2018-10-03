@@ -38,6 +38,10 @@
 * In the home directory, run `$ npm test`
 * Open a Chrome browser matching the URL to view the passing/fail specs
 
+## Issues
+* No function to seperate two combinded words `whitecap`
+* Having trouble calling functions to add three different prototype functions (solution.countVowels() + solution.countPrePostFix() + solution.countDoubleVowel() + solution.countEndWithE() + solution.countEndWithIa())
+
 ## Technologies Used
 * HTML
 * JavaScript
