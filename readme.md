@@ -1,6 +1,6 @@
 # haiku_checker
 
-## An app to check if poems are haikus
+## An app to check if a poem is a haiku (17 syllables).
 
 ## Epicodus two day project: started 03/14-15/2018
 
@@ -21,7 +21,7 @@
 7. Be able to count the number of times a word ends with 'ia'.
 8. Be able to count the number of times a word contains a prefix or suffix.
 9. Be able to count the number of times a word contains double consonants that makes a sound.
-10. Make sure a haiku has 17 syllables (failed spec).
+10. Make sure the haiku contains 17 syllables.
 
 ### Sources for haiku and syllable detection
 #### http://jzimba.blogspot.com/2017/07/an-algorithm-for-counting-syllables.html (interesting rules)
@@ -36,11 +36,12 @@
 ## Testing setup
 * Clone the repository
 * In the home directory, run `$ npm test`
-* Open a Chrome browser matching the URL to view the passing/fail specs
+* View the opened Chrome browser (or copy the URL from the terminal) to view the passing/failing specs
 
 ## Issues
-* No function to seperate two combinded words `whitecap`
-* Having trouble calling functions to add three different prototype functions (solution.countVowels() + solution.countPrePostFix() + solution.countDoubleVowel() + solution.countEndWithE() + solution.countEndWithIa())
+* Application will not verify the American haiku format (5-7-5 three lines)
+* No function to seperate combinded words like `whitecap`
+* No functions detecting difficult American words
 
 ## Technologies Used
 * HTML
