@@ -46,8 +46,8 @@ describe('Solution', function() {
     expect(endsWithConsSound.countConSound()).toEqual(2);
   });
 
-  it('should make sure a haiku has 17 syllables', function(){
-    let solution = new Solution(17);
-    expect(solution.haikuNumber).toEqual(17);
+  it('should make sure the haiku contains 17 syllables', function(){
+    let solution = new Solution("An old silent pond, A frog jumps into the pond, splash! Silence again.");
+    expect(solution.haikuNumber()).toEqual(17);
   });
 });

@@ -48,7 +48,7 @@ Solution.prototype.countDoubleVowel = function() {
 
 Solution.prototype.countEndWithE = function() {
   let counter = 0;
-  let words = this.haiku
+  let words = this.haiku;
   for (let i = 0; i < words.split(" ").length; i++) {
     let anyWord = words.split(" ")[i].slice(-1)
     if(anyWord === "e" && words.split(" ")[i].length > 3) {
@@ -60,7 +60,7 @@ Solution.prototype.countEndWithE = function() {
 
 Solution.prototype.countEndWithIa = function() {
   let counter = 0;
-  let phrase = this.haiku
+  let phrase = this.haiku;
   for (let i = 0; i < phrase.split(" ").length; i++) {
     let iaWord = phrase.split(" ")[i].slice(-2)
     if(iaWord === "ia") {
@@ -72,7 +72,7 @@ Solution.prototype.countEndWithIa = function() {
 
 Solution.prototype.countPrePostFix = function() {
   let counter = 0;
-  let phrase = this.haiku
+  let phrase = this.haiku;
   for (let i = 0; i < phrase.split(" ").length; i++) {
     let oneWord = phrase.split(" ")[i]
     let twoPreWord = phrase.split(" ")[i].slice(0, 2)
@@ -138,7 +138,7 @@ Solution.prototype.countConSound = function() {
   let counter = 0;
   let phrase = this.haiku
   for (let i = 0; i < phrase.split(" ").length; i++) {
-  let oneWord = phrase.split(" ")[i].slice(2, -2)
+    let oneWord = phrase.split(" ")[i].slice(2, -2)
     if (oneWord.match(/[cspwt][h]/g)) {
       counter += 1;
     }
@@ -147,6 +147,11 @@ Solution.prototype.countConSound = function() {
 };
 
 Solution.prototype.haikuNumber = function() {
-  // let numbers = this.haiku.countVowels;
-  return Solution.countVowels;
+  let phrase = new Solution(this.haiku);
+  let functions = [phrase.countVowels(), phrase.countPrePostFix(), phrase.countDoubleVowel(), phrase.countEndWithIa(),phrase.countEndWithE()]
+  let result = 0;
+  for(let i = 0; i < functions.length; i++) {
+    result += parseInt(functions[i], 10);
+  }
+  return result;
 };
