@@ -1,7 +1,7 @@
 export function Solution(haiku) {
   this.haiku = haiku.replace(/[^a-zA-Z ]/g, "").toLowerCase();
+  this.word = this.haiku.split(" ");
 }
-// add a branch to consider 0 values
 
 exports.solutionModule = Solution;
 
@@ -20,7 +20,7 @@ Solution.prototype.countNextConsonants = function() {
 };
 
 Solution.prototype.countVowels = function() {
-  let consts = this.haiku.match(/[aeiou]/g);
+  let consts = this.haiku.match(/[aeiouy]/g);
   if(consts) {
     return consts.length
   } else {
@@ -38,9 +38,9 @@ Solution.prototype.countPair = function() {
 };
 
 Solution.prototype.countDoubleVowel = function() {
-  let consts = this.haiku.match(/[aeiou]{2,}/g);
+  let consts = this.haiku.match(/[aeiouy]{2,3}/g);
   if(consts) {
-    return consts.length
+    return consts.length * -1
   } else {
     return 0
   }
@@ -51,8 +51,8 @@ Solution.prototype.countEndWithE = function() {
   let words = this.haiku
   for (let i = 0; i < words.split(" ").length; i++) {
     let anyWord = words.split(" ")[i].slice(-1)
-    if(anyWord === "e") {
-      counter += 1;
+    if(anyWord === "e" && words.split(" ")[i].length > 3) {
+      counter -= 1;
     }
   }
   return counter
@@ -64,7 +64,7 @@ Solution.prototype.countEndWithIa = function() {
   for (let i = 0; i < phrase.split(" ").length; i++) {
     let iaWord = phrase.split(" ")[i].slice(-2)
     if(iaWord === "ia") {
-      counter += 1;
+      counter -= 1;
     } 
   }
   return counter;
@@ -74,22 +74,33 @@ Solution.prototype.countPrePostFix = function() {
   let counter = 0;
   let phrase = this.haiku
   for (let i = 0; i < phrase.split(" ").length; i++) {
+    let oneWord = phrase.split(" ")[i]
     let twoPreWord = phrase.split(" ")[i].slice(0, 2)
     let threePreWord = phrase.split(" ")[i].slice(0, 3)
     let fourPreWord = phrase.split(" ")[i].slice(0, 4)
     let fivePreWord = phrase.split(" ")[i].slice(0, 5)
+    let twoPostWord = phrase.split(" ")[i].slice(-2)
+    let thirdPostWord = phrase.split(" ")[i].slice(-3, -2)
     let fourPostWord = phrase.split(" ")[i].slice(-4)
     let fivePostWord = phrase.split(" ")[i].slice(-5)
-    if(twoPreWord === "an" || twoPreWord === "ab") {
+    if(twoPreWord === "an" && oneWord.length > 3) {
       counter += 1;
-    } else if (twoPreWord === "ad" || twoPreWord === "bi") {
+    } else if (twoPreWord === "bi" && oneWord.length > 2) {
       counter += 1;
-    } else if (twoPreWord === "di" || twoPreWord === "ex") {
+    } else if (twoPreWord === "ad" && oneWord.lengh > 2) {
       counter += 1;
-    } else if (twoPreWord === "in" || twoPreWord === "im") {
+    } else if (twoPreWord === "ex" && oneWord.length > 2) {
+      counter += 1;
+    } else if (twoPreWord === "we" && oneWord.length > 2) {
+      counter += 1;
+    } else if (twoPreWord === "he" && oneWord.length > 2) {
+      counter += 1;
+    } else if (twoPreWord === "me" && oneWord.length > 2) {
+      counter += 1;
+    } else if (twoPreWord === "di" && oneWord.length > 2) {
       counter += 1;
     } 
-    if(threePreWord === "abs" || threePreWord === "dis") {
+    if(threePreWord === "dis") {
       counter += 1;
     } else if (threePreWord === "ped" || threePreWord === "pre") {
       counter += 1;
@@ -99,6 +110,8 @@ Solution.prototype.countPrePostFix = function() {
       counter += 1;
     } else if (threePreWord === "vis") {
       counter += 1;
+    } else if (threePreWord === "she" && oneWord.length > 3) {
+      counter += 1;
     }
     if(fourPreWord === "graph" || fourPreWord === "post" ) {
       counter += 1;
@@ -106,6 +119,9 @@ Solution.prototype.countPrePostFix = function() {
       counter += 1;
     } 
     if(fivePreWord === "trans") {
+      counter += 1;
+    }
+    if(twoPostWord === "le" && thirdPostWord.match(/[qwrtypsdfghjklzxcvbnm]/g)) {
       counter += 1;
     }
     if(fourPostWord === "cide") {
@@ -119,10 +135,18 @@ Solution.prototype.countPrePostFix = function() {
 };
 
 Solution.prototype.countConSound = function() {
-  let consts = this.haiku.match(/[cspwt][h]/g);
-  if(consts) {
-    return consts.length
-  } else {
-    return 0
+  let counter = 0;
+  let phrase = this.haiku
+  for (let i = 0; i < phrase.split(" ").length; i++) {
+  let oneWord = phrase.split(" ")[i].slice(2, -2)
+    if (oneWord.match(/[cspwt][h]/g)) {
+      counter += 1;
+    }
   }
+  return counter;
+};
+
+Solution.prototype.haikuNumber = function() {
+  // let numbers = this.haiku.countVowels;
+  return Solution.countVowels;
 };

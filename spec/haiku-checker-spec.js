@@ -7,8 +7,8 @@ describe('Solution', function() {
   });
 
   it('should be able to detect 2 or more consonants for a word', function () {
-    let consonantsSolution = new Solution("jumps");
-    expect(consonantsSolution.countNextConsonants()).toEqual(1);
+    let consonantsSolution = new Solution("jumps beginning");
+    expect(consonantsSolution.countNextConsonants()).toEqual(3);
   });
 
   it('should be able to count vowels for a word', function () {
@@ -23,31 +23,31 @@ describe('Solution', function() {
 
   it('should count double vowels for a word', function () {
     let doubleVowels = new Solution("pool again.");
-    expect(doubleVowels.countDoubleVowel()).toEqual(2);
+    expect(doubleVowels.countDoubleVowel()).toEqual(-2);
   });
 
   it('should count number of times a word ends with e', function () {
     let endsWithE= new Solution("the silence.");
-    expect(endsWithE.countEndWithE()).toEqual(2);
+    expect(endsWithE.countEndWithE()).toEqual(-1);
   });
 
   it('should count number of times a word ends with ia', function () {
     let endsWithIa= new Solution("Inertia");
-    expect(endsWithIa.countEndWithIa()).toEqual(1);
+    expect(endsWithIa.countEndWithIa()).toEqual(-1);
   });
 
   it('should count number of times a word contains a prefix or suffix', function () {
-    let preSuffix= new Solution("An into");
+    let preSuffix= new Solution("produce exwife");
     expect(preSuffix.countPrePostFix()).toEqual(2);
   });
 
   it('should count number of times a word contains double consonants that makes a sound', function () {
-    let endsWithConsSound = new Solution("the splash!");
+    let endsWithConsSound = new Solution("flashdance atmosphere");
     expect(endsWithConsSound.countConSound()).toEqual(2);
   });
 
   it('should make sure a haiku has 17 syllables', function(){
     let solution = new Solution(17);
-    expect(solution.haiku).toEqual(17);
+    expect(solution.haikuNumber).toEqual(17);
   });
 });

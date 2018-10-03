@@ -19,6 +19,6 @@ $(document).ready(function() {
     $('#haikus').append('<li>Count 2 or more consonants next to each other: ' + solution.countNextConsonants() + '</li>');
     $('#haikus').append('<li>************ Other Results ************</li>');
     $('#haikus').append('<li>Count vowel-consonant pairs: ' + solution.countPair() + '</li>');
-    $('#haikus').append('<li>************ Seventeen syllables? ************: ' + solution.haikuNumber() + solution.countVowels() + '</li>');
+    $('#haikus').append('<li>************ Seventeen syllables? ************: ' + solution.haikuNumber() + ' ' + solution.countVowels() + '</li>');
   });
 });
