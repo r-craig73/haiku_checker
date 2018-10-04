@@ -37,8 +37,8 @@ describe('Solution', function() {
   });
 
   it('should count number of times a word contains a prefix or suffix', function () {
-    let preSuffix= new Solution("produce exwife");
-    expect(preSuffix.countEndsWithLe()).toEqual(2);
+    let preSuffix= new Solution("little trouble");
+    expect(preSuffix.countEndWithLe()).toEqual(2);
   });
 
   it('should count number of times a word contains double consonants that makes a sound', function () {
