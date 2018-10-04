@@ -12,7 +12,7 @@ $(document).ready(function() {
     $('#haikus').append('<li>Haiku text: ' + solution.haiku + '</li>');
     $('#haikus').append('<li>Count vowels: ' + solution.countVowels() + '</li>');
     $('#haikus').append('<li>Count words ending with [consonant]le: ' + solution.countEndWithLe() + '</li>');
-    $('#haikus').append('<li>Count double vowels, diphtongs, or triphthongs: ' + solution.countDoubleVowel() + '</li>');
+    $('#haikus').append('<li>Count double vowels, diphtongs or triphthongs: ' + solution.countDoubleVowel() + '</li>');
     $('#haikus').append('<li>Count words ending with a silent e: ' + solution.countEndWithE() + '</li>');
     $('#haikus').append('<li>Count words ending with ia: ' + solution.countEndWithIa() + '</li>');
     $('#haikus').append('<li>Count 2 consonants resulting in sound within a word: ' + solution.countConSound() + '</li>');

@@ -98,7 +98,7 @@ Solution.prototype.countConSound = function() {
 
 Solution.prototype.haikuNumber = function() {
   let phrase = new Solution(this.haiku);
-  let functions = [phrase.countVowels(), phrase.countEndWithLe(), phrase.countDoubleVowel(), phrase.countEndWithIa(),phrase.countEndWithE()]
+  let functions = [phrase.countVowels(), phrase.countEndWithLe(), phrase.countDoubleVowel(), phrase.countEndWithIa(), phrase.countEndWithE()]
   let result = 0;
   for(let i = 0; i < functions.length; i++) {
     result += parseInt(functions[i], 10);
