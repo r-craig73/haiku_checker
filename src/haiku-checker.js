@@ -38,21 +38,46 @@ Solution.prototype.countPair = function() {
 };
 
 Solution.prototype.countDoubleVowel = function() {
-  let consts = this.haiku.match(/[aeiouy]{2,3}/g);
-  if(consts) {
-    return consts.length * -1
-  } else {
-    return 0
+  let counter = 0;
+  let phrase = this.haiku;
+  for (let i = 0; i < phrase.split(" ").length; i++) {
+    let oneWord = phrase.split(" ")[i]
+    if (oneWord.match(/[a][iuy]/g)) {
+      counter -= 1;
+    } else if (oneWord.match(/[e][aeiy]/g)) {
+      counter -= 1;
+    } else if (oneWord.match(/[i][aeo]/g)) {
+      counter -= 1;
+    } else if (oneWord.match(/[o][aeioy]/g)) {
+      counter -= 1;
+    } else if (oneWord.match(/[u][ey]/g)) {
+      counter -= 1;
+    }
+    if (oneWord.match(/[e][a][u]/g)) {
+      counter -= 1;
+    } else if (oneWord.match(/[i][o][u]/g)) {
+      counter -= 1;
+    } else if (oneWord.match(/[u][e][u]/g)) {
+      counter -= 1;
+    }
   }
+  return counter
 };
 
 Solution.prototype.countEndWithE = function() {
   let counter = 0;
   let words = this.haiku;
   for (let i = 0; i < words.split(" ").length; i++) {
-    let anyWord = words.split(" ")[i].slice(-1)
+    let oneWord = words.split(" ")[i]
+    let anyWord = words.split(" ")[i].slice(-1);
+    let lastThreeLetters = words.split(" ")[i].slice(-3);
     if(anyWord === "e" && words.split(" ")[i].length > 3) {
       counter -= 1;
+    }
+    if (lastThreeLetters === "ire") {
+      counter += 1;
+    } else if (lastThreeLetters === "our" && oneWord.length > 3) {
+      counter += 2;
     }
   }
   return counter
@@ -75,9 +100,9 @@ Solution.prototype.countEndWithLe = function() {
   let phrase = this.haiku;
   for (let i = 0; i < phrase.split(" ").length; i++) {
     let oneWord = phrase.split(" ")[i]
-    let twoPostWord = oneWord.slice(-2)
+    let lastTwoLetters = oneWord.slice(-2)
     let thirdPostLetter = oneWord.slice(-3, -2)
-    if(twoPostWord === "le" && thirdPostLetter.match(/[qwrtypsdfghjklzxcvbnm]/g)) {
+    if(lastTwoLetters === "le" && thirdPostLetter.match(/[qwrtypsdfghjklzxcvbnm]/g)) {
       counter += 1;
     }
   }

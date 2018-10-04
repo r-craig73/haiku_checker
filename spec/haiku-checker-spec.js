@@ -22,22 +22,24 @@ describe('Solution', function() {
   });
 
   it('should count double vowels for a word', function () {
-    let doubleVowels = new Solution("pool again.");
-    expect(doubleVowels.countDoubleVowel()).toEqual(-2);
+    let doubleVowels = new Solution("pool again beautiful");
+    expect(doubleVowels.countDoubleVowel()).toEqual(-4);
   });
 
   it('should count number of times a word ends with e', function () {
-    let endsWithE= new Solution("the silence.");
+    let endsWithE = new Solution("the silence.");
     expect(endsWithE.countEndWithE()).toEqual(-1);
+    let endsWithE2 = new Solution("fire hour");
+    expect(endsWithE2.countEndWithE()).toEqual(2);
   });
 
   it('should count number of times a word ends with ia', function () {
-    let endsWithIa= new Solution("Inertia");
+    let endsWithIa = new Solution("Inertia");
     expect(endsWithIa.countEndWithIa()).toEqual(-1);
   });
 
   it('should count number of times a word contains a prefix or suffix', function () {
-    let preSuffix= new Solution("little trouble");
+    let preSuffix = new Solution("little trouble");
     expect(preSuffix.countEndWithLe()).toEqual(2);
   });
 
