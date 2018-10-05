@@ -1,3 +1,7 @@
-body {
-  background-color: lightskyblue;
+#bg-1 {
+  background-color: rgb(149, 180, 236);
+}
+
+div.card-header {
+  text-align: center;
 }

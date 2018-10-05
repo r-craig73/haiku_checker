@@ -4,16 +4,43 @@
     <title>Haiku Checker</title>
   </head>
   <body>
-    <br>
-    <div class="container">
+    <div class="container" id="bg-1">
+      <br>
       <form id="haiku-form">
-        <label for="haiku">Please input your haiku:</label>
-        <input id="haiku" type="text" style="height:30px;width: 600px;">
-        <br>
-        <br>
-        <button type="submit">Submit</button>
+        <div class="form-group">
+          <label for="input-haiku">Please input your haiku:</label>
+          <textarea class="form-control" id="haiku" rows="1" placeholder="Enter poem here"></textarea>
+        </div>
+        <div class="submit-button">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
       </form>
-      <ul id="haikus"></ul>
+      <br>
+      <div class="card-group" id="haikus">
+        <div class="card">
+          <div class="card-header">
+            <h4>Is the poem a Haiku (17 syllables)?</h4>
+          </div>
+          <div class="card-body">
+            <h5 class="card-text">Haiku text:</h5>
+            <h5 class="card-text" id="haikus-text"></h5>
+            <h5 class="card-text" id="haikus-syllables"></h5>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h4>Haiku syllable detection details</h4>
+          </div>
+          <div class="card-body">
+            <span class="card-text" id="haikus-details"></span>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="new-haiku-button">
+        <button class="btn btn-success" id="new-haiku-button">New Haiku</button>
+      </div>
+      <br>
     </div>
   </body>
 </html>
