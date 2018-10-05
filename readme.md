@@ -2,6 +2,8 @@
 
 ## An app to check if a poem is a haiku (17 syllables).
 
+<kbd><img src="./img/screen-shot.png" alt="Haiku Checker Screenshot"></kbd>
+
 ## Epicodus two day project: started 03/14-15/2018
 
 ## GitHub repository: https://github.com/r-craig73/haiku_checker
