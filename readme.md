@@ -18,10 +18,10 @@
 2. Syllable detection by 2 or more consonants next to each other.
 3. Be able to count vowels for each word.
 4. Be able to count vowels and consonants pairs.
-5. Be able to count double vowels, diptongs or triphthongs as one syllable.
+5. Be able to count double vowels, dipthongs or triphthongs as one syllable.
 6. Be able to count the number of times a word ends with 'e' & triphthongs cases ending in 'our' and 'ire'.
 7. Be able to count the number of times a word ends with 'ia'.
-8. Be able to count the number of times a word ends with [consonant]le.
+8. Be able to count the number of times a word ends with [consonant] 'le'.
 9. Be able to count the number of times a word contains double consonants that makes a sound.
 10. Make sure the haiku contains 17 syllables (sum of specs 1, 5, 6, 7 & 8).
 
@@ -29,11 +29,15 @@
 #### http://jzimba.blogspot.com/2017/07/an-algorithm-for-counting-syllables.html (interesting rules)
 #### The consonant surrounded by vowels https://www.howmanysyllables.com/divideintosyllables
 
-## Appliction Setup
+## Application Setup
 * Clone the repository
-* In the home directory, install webpacks and npm `$ npm install`
+* In the home directory, install webpack and npm `$ npm install`
+
+## Running the application
 * In the home directory, build the code by running `$ npm run build`
 * Open `haiku_checker/dist/index.html` in a Chrome browser to run the application
+* Or...
+* In the home directory, run `$ npm start build`.  Webpack will automatically start a development server in a web browser at http://localhost:8080/. Updates in the application will be saved instantly.
 
 ## Testing setup
 * Clone the repository
@@ -42,13 +46,13 @@
 
 ## Issues
 * Application will not verify the American haiku format (5-7-5 three lines)
-* No function to seperate combinded words like `whitecap`
+* No function to separate combined words like `whitecap`
 * No functions detecting difficult American words
 
 ## Technologies Used
 * HTML
 * JavaScript
-* Webpacks and npm
+* Webpack and npm
 * Jasmine
 * Karma
 
