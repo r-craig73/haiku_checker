@@ -1,5 +1,6 @@
 import './styles.css';
 import $ from 'jquery';
+import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Solution } from './haiku-checker';
 
@@ -20,13 +21,13 @@ $(document).ready(function() {
     let haiku = $('#haiku').val();
     let solution = new Solution(haiku.replace(/[^a-zA-Z ]/g, "").toLowerCase());
     $('#haikus-text').append('<b>' + solution.haiku + '</b>');
-    $('#haikus-syllables').append('<br>Poem syllables: ' + '<b>' + solution.haikuNumber() + ' syllables</b>');
+    $('#haikus-syllables').append('<br>Poem syllables: ' + '<b>' + solution.aHaiku());
     $('#haikus-details').append('<li>Count vowels: ' + solution.countVowels() + '</li>');
     $('#haikus-details').append('<li>Count words ending with [consonant]le: ' + solution.countEndWithLe() + '</li>');
     $('#haikus-details').append('<li>Count double vowels, diphtongs or triphthongs: ' + solution.countDoubleVowel() + '</li>');
     $('#haikus-details').append('<li>Count words ending with a silent e: ' + solution.countEndWithE() + '</li>');
     $('#haikus-details').append('<li>Count words ending with ia: ' + solution.countEndWithIa() + '</li>');
-    $('#haikus-details').append('<br><h5>Sum of five numbers: ' + solution.haikuNumber() + '</h5>');
+    $('#haikus-details').append('<br><h5>Sum of five details: ' + solution.haikuNumber() + '</h5>');
   });
 
   $('#new-haiku-button').click(function() {
