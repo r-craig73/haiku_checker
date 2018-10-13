@@ -4,6 +4,8 @@
 
 <kbd><img src="./img/screen-shot.png" alt="Haiku Checker Screenshot"></kbd>
 
+<kbd><img src="./img/screen-shot-no.png" alt="Haiku Checker Screenshot, not a Haiku"></kbd>
+
 ## Epicodus two day project: started 03/14-15/2018
 
 ## GitHub repository: https://github.com/r-craig73/haiku_checker
@@ -37,8 +39,8 @@
 ## Running the application
 * In the home directory, build the code by running `$ npm run build`
 * Open `haiku_checker/dist/index.html` in a Chrome browser to run the application
-* Or...
-* In the home directory, run `$ npm start build`.  Webpack will automatically start a development server in a web browser at http://localhost:8080/. Updates in the application will be saved instantly.
+* ~~Or...~~
+* ~~In the home directory, run `$ npm start build`.  Webpack will automatically start a development server in a web browser at http://localhost:8080/. Updates in the application will be saved instantly.~~  Not working!
 
 ## Testing setup
 * Clone the repository
@@ -50,7 +52,7 @@
 * No function to separate combined words like `whitecap`
 * No functions detecting difficult American words
 * Webpack issue running `$ npm start build`. "ERROR in multi (webpack)-dev-server/client?http://localhost:8080 build
-Module not found: Error: Can't resolve 'build' in '/Users/ronc/Desktop/javascript/haiku_checker'
+Module not found: Error: Can't resolve 'build' in '.../haiku_checker'
  @ multi (webpack)-dev-server/client?http://localhost:8080 build main[1]"
  
 
