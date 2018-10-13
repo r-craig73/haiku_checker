@@ -48,8 +48,17 @@ describe('Solution', function() {
     expect(endsWithConsSound.countConSound()).toEqual(2);
   });
 
-  it('should make sure the haiku contains 17 syllables', function(){
+  it('should count the number of syllables', function(){
     let solution = new Solution("An old silent pond, A frog jumps into the pond, splash! Silence again.");
     expect(solution.haikuNumber()).toEqual(17);
+    let solution1 = new Solution("Hello world");
+    expect(solution1.haikuNumber()).toEqual(3);
+  });
+
+  it('should make sure the haiku contains 17 syllables', function(){
+    let answer = new Solution("An old silent pond, A frog jumps into the pond, splash! Silence again.");
+    expect(answer.aHaiku()).toEqual("Yes, the poem is a Haiku! 17 syllables!");
+    let answer1 = new Solution("Hello world");
+    expect(answer1.aHaiku()).toEqual("No, the poem is not a Haiku! 3 syllables!");
   });
 });

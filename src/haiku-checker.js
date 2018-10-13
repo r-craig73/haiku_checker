@@ -128,5 +128,15 @@ Solution.prototype.haikuNumber = function() {
   for(let i = 0; i < functions.length; i++) {
     result += parseInt(functions[i], 10);
   }
-  return result;
+  return result
+};
+
+Solution.prototype.aHaiku = function() {
+  let phrase = new Solution(this.haiku);
+  let result = phrase.haikuNumber();
+  if (result === 17) {
+    return "Yes, the poem is a Haiku! " + result + " syllables!"
+  } else {
+    return "No, the poem is not a Haiku! " + result + " syllables!"
+  }
 };
