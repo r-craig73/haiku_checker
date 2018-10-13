@@ -21,7 +21,7 @@ $(document).ready(function() {
     let haiku = $('#haiku').val();
     let solution = new Solution(haiku.replace(/[^a-zA-Z ]/g, "").toLowerCase());
     $('#haikus-text').append('<b>' + solution.haiku + '</b>');
-    $('#haikus-syllables').append('<br>Poem syllables: ' + '<b>' + solution.aHaiku());
+    $('#haikus-syllables').append('<b>' + solution.aHaiku() + '<b>');
     $('#haikus-details').append('<li>Count vowels: ' + solution.countVowels() + '</li>');
     $('#haikus-details').append('<li>Count words ending with [consonant]le: ' + solution.countEndWithLe() + '</li>');
     $('#haikus-details').append('<li>Count double vowels, diphtongs or triphthongs: ' + solution.countDoubleVowel() + '</li>');

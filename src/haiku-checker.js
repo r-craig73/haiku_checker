@@ -76,8 +76,12 @@ Solution.prototype.countEndWithE = function() {
     }
     if (lastThreeLetters === "ire") {
       counter += 1;
-    } else if (lastThreeLetters === "our" && oneWord.length > 3) {
+    } else if (lastThreeLetters === "our" && oneWord.length > 3 && oneWord != "your") {
       counter += 2;
+    } else if (oneWord === "your") {
+      counter += -2;
+    } else if (oneWord ===  "you") {
+      counter += -2;
     }
   }
   return counter
