@@ -14,6 +14,9 @@ module.exports = {
   devServer: {
     contentBase: './dist'
   },
+  // resolve: {
+  //   extensions: ['.js', '.jsx']
+  // },
   plugins: [
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
