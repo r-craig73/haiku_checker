@@ -24,6 +24,7 @@
 8. Be able to count the number of times a word ends with [consonant] 'le'.
 9. Be able to count the number of times a word contains double consonants that makes a sound.
 10. Make sure the haiku contains 17 syllables (sum of specs 1, 5, 6, 7 & 8).
+11. Return a phrase to tell a user if the poem is a Haiku ('Yes/No, the poem is/is not a Haiku! xx syllables!').
 
 ### Sources for haiku and syllable detection
 #### http://jzimba.blogspot.com/2017/07/an-algorithm-for-counting-syllables.html (interesting rules)
@@ -48,6 +49,10 @@
 * Application will not verify the American haiku format (5-7-5 three lines)
 * No function to separate combined words like `whitecap`
 * No functions detecting difficult American words
+* Webpack issue running `$ npm start build`. "ERROR in multi (webpack)-dev-server/client?http://localhost:8080 build
+Module not found: Error: Can't resolve 'build' in '/Users/ronc/Desktop/javascript/haiku_checker'
+ @ multi (webpack)-dev-server/client?http://localhost:8080 build main[1]"
+ 
 
 ## Technologies Used
 * HTML
