@@ -55,7 +55,7 @@ describe('Solution', function() {
     expect(solution1.haikuNumber()).toEqual(3);
   });
 
-  it('should make sure the haiku contains 17 syllables', function(){
+  it('should make sure the haiku outcome is either yes or no', function(){
     let answer = new Solution("An old silent pond, A frog jumps into the pond, splash! Silence again.");
     expect(answer.aHaiku()).toEqual("Yes, the poem is a Haiku! 17 syllables!");
     let answer1 = new Solution("Hello world");
