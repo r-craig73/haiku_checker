@@ -39,8 +39,8 @@
 ## Running the application
 * In the home directory, build the code by running `$ npm run build`
 * Open `haiku_checker/dist/index.html` in a Chrome browser to run the application
-* ~~Or...~~
-* ~~In the home directory, run `$ npm start build`.  Webpack will automatically start a development server in a web browser at http://localhost:8080/. Updates in the application will be saved instantly.~~  Not working!
+* Or...
+* In the home directory, run `$ npm start build`.  Webpack will automatically start a development server in a web browser at http://localhost:8080/. Updates in the application will be saved instantly.  Not working!
 
 ## Testing setup
 * Clone the repository
