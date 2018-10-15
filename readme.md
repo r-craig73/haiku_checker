@@ -20,7 +20,7 @@
 2. Syllable detection by 2 or more consonants next to each other.
 3. Be able to count vowels for each word.
 4. Be able to count vowels and consonants pairs.
-5. Be able to count double vowels, dipthongs or triphthongs as one syllable.
+5. Be able to count double vowels, diphthongs or triphthongs as one syllable.
 6. Be able to count the number of times a word ends with 'e' & triphthongs cases ending in 'our' and 'ire'.
 7. Be able to count the number of times a word ends with 'ia'.
 8. Be able to count the number of times a word ends with [consonant] 'le'.
