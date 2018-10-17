@@ -40,7 +40,7 @@
 * In the home directory, build the code by running `$ npm run build`
 * Open `haiku_checker/dist/index.html` in a Chrome browser to run the application
 * Or...
-* In the home directory, run `$ npm start build`.  Webpack will automatically start a development server in a web browser at http://localhost:8080/. Updates in the application will be saved instantly.  Not working!
+* In the home directory, run `$ npm start build`.  Webpack will automatically start a development server in a web browser at http://localhost:8080/. Updates in the application will be saved instantly.
 
 ## Testing setup
 * Clone the repository
@@ -50,11 +50,7 @@
 ## Issues
 * Application will not verify the American haiku format (5-7-5 three lines)
 * No function to separate combined words like `whitecap`
-* No functions detecting difficult American words
-* Webpack issue running `$ npm start build`. "ERROR in multi (webpack)-dev-server/client?http://localhost:8080 build
-Module not found: Error: Can't resolve 'build' in '.../haiku_checker'
- @ multi (webpack)-dev-server/client?http://localhost:8080 build main[1]"
- 
+* No functions detecting difficult American words or tricky three letter words
 
 ## Technologies Used
 * HTML
