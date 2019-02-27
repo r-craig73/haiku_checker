@@ -14,9 +14,6 @@ module.exports = {
   devServer: {
     contentBase: './dist'
   },
-  // resolve: {
-  //   extensions: ['.js', '.jsx']
-  // },
   plugins: [
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
@@ -41,7 +38,7 @@ module.exports = {
           /node_modules/,
           /spec/
         ],
-        loader: "eslint-loader"
+        loader: 'eslint-loader'
       },
       {
         test: /\.js$/,
@@ -49,7 +46,7 @@ module.exports = {
           /node_modules/,
           /spec/
         ],
-        loader: "babel-loader",
+        loader: 'babel-loader',
         options: {
           presets: ['es2015']
         }
