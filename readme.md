@@ -40,7 +40,7 @@
 * In the home directory, build the code by running `$ npm run build`.
 * Open `haiku_checker/dist/index.html` in a Chrome browser to run the application.
 * Or...
-* In the home directory, run `$ npm start build`.  Webpack will automatically start a development server in a web browser at http://localhost:8080/. Updates in the application will be saved instantly.
+* In the home directory, run `$ npm run start`.  Webpack will automatically start a development server in a web browser at http://localhost:8080/. Updates in the application will be saved instantly.
 
 ## Testing setup
 * Clone the repository.
@@ -48,7 +48,6 @@
 * View the opened Chrome browser (or copy the URL from the terminal) to view the passing/failing specs.
 
 ## Issues
-* The development server does not start `$ npm start build`. (Chrome Uncaught Error: Cannot find module 'build'; Terminal error: ERROR in multi (webpack)-dev-server/client?http://localhost:8080 build)
 * Application does not verify the American haiku format (5-7-5 three line poem).
 * No function to separate combined words like `whitecap`.
 * No functions detecting difficult American words or tricky three letter words.
