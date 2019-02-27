@@ -44,9 +44,9 @@ Solution.prototype.countDoubleVowel = function() {
     let oneWord = phrase.split(" ")[i]
     if (oneWord.match(/[a][iuy]/g)) {
       counter -= 1;
-    } else if (oneWord.match(/[e][aeiy]/g)) {
+    } else if (oneWord.match(/[e][aeiouy]/g)) {
       counter -= 1;
-    } else if (oneWord.match(/[i][aeo]/g)) {
+    } else if (oneWord.match(/[i][aeiy]/g)) {
       counter -= 1;
     } else if (oneWord.match(/[o][aeioy]/g)) {
       counter -= 1;
